@@ -38,12 +38,23 @@
 			   		}
 			   		resultText += "</p>";
 			   		$("#results").html(resultText);
+				   	var quizResult = new QuizResult();
 			   		for(var i = 0; i < questionList.length; i++) {
+				   		// create Parse object and store it
+			   			quizResult.set(questionList[i].name,questionList[i].answer);			   			
 			   		}
+			   		quizResult.save("name", this.opts.name);
+			   		quizResult.save({
+						success: function(result) {
+							console.log("SAVED!");
+
+						}, error: function(error){
+							alert("Error " + error.message);
+						}
+
+					});
 
 
-			   		// create Parse object and store it
-			   		var myPost = new QuizResult();
 
 			   		/*
 			   		$("#results").html("<p>Your name is " + this.opts.name + "! You like " +  $(answered[1]).val() + ", the color " + $(answered[0]).val() + ", and your favorite subject in school is " + $(answered[2]).val() + "!</p>");

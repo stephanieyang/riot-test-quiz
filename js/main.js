@@ -15,6 +15,7 @@ var questionList = [
 	val3 : "blue",
 	val4 : "not a primary color",
 	responseText : ["Your favorite color is ",","],
+	answer : "",
 	resultText : ""
 },
 {
@@ -25,6 +26,7 @@ var questionList = [
 	val3 : "video games",
 	val4 : "something cool",
 	responseText : ["your hobby is ",","],
+	answer : "",
 	resultText : ""
 },
 {
@@ -35,6 +37,7 @@ var questionList = [
 	val3 : "science",
 	val4 : "English",
 	responseText : ["and your favorite subject is ","!"],
+	answer : "",
 	resultText : ""
 }];
 

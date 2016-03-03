@@ -22,6 +22,7 @@
 		console.log(this.answer);
 		this.text = this.question.responseText[0] + this.answer + this.question.responseText[1];
 		this.question.resultText = this.text;
+		this.question.answer = this.answer;
 		console.log(this.text);
 	}
 
